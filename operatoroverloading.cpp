@@ -1,20 +1,27 @@
 #include <iostream>
 using namespace std;
 
-class Point {
-  int x, y;
+class Point
+{
+int x, y;
 public:
-  Point() {} //prajjwal will add here
+Point() {} //commit done by prajjwal 
+Point (int px, int py)
+{
+x=px;
+y=py;
+}
+//
+void show()
+{
+cout << x << " ";
+cout << y << "\n";
+}
 
-  void show() {
-    cout << x << " ";
-    cout << y << "\n";
-  }
-
-  friend Point operator+(Point op1, Point op2); // now a friend
-  Point operator-(Point op2);
-  Point operator=(Point op2);
-  Point operator++();
+friend Point operator+(Point op1, Point op2); // now a friend
+Point operator-(Point op2);
+Point operator=(Point op2);
+Point operator++();
 };
 
 // Nishkarsh will addd here
