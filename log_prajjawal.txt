@@ -1,0 +1,147 @@
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop
+$ mkdir repo2
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop
+$ cd repo2
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2
+$ git clone "https://github.com/8989670898/SCM_PROJECT.git"
+Cloning into 'SCM_PROJECT'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2
+$ ls
+SCM_PROJECT/
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2
+$ cd SCM_PROJECT/
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (master)
+$ ls
+binary.cpp  operatoroverloading.cpp
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (master)
+$ git branch test
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (master)
+$ git checkout test
+Switched to branch 'test'
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ nano operatoroverloading.cpp
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git status
+On branch test
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   operatoroverloading.cpp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git add .
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git status
+On branch test
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   operatoroverloading.cpp
+
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git commit -m "Added a constructor named as point and defined it"
+[test a02b4f8] Added a constructor named as point and defined it
+ 1 file changed, 19 insertions(+), 12 deletions(-)
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git push -u origin test
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 511 bytes | 170.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/8989670898/SCM_PROJECT.git
+ * [new branch]      test -> test
+Branch 'test' set up to track remote branch 'test' from 'origin'.
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git diff
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git log
+commit a02b4f83c31bf6f7c6810638e1e841645d7e2c59 (HEAD -> test, origin/test)
+Author: Prajjawal Banati <500060722@stu.upes.ac.in>
+Date:   Sun Apr 22 17:58:17 2018 +0530
+
+    Added a constructor named as point and defined it
+
+commit 1d254a55eb3b7f1566eef178905530e5d73fa820 (origin/master, origin/HEAD, master)
+Author: 8989670898 <raiparth2@gmail.com>
+Date:   Sun Apr 22 02:48:37 2018 -0700
+
+    comitting my first project in scm
+
+commit b7780227c4d59c45c7c1781d33b57f941c6e909b
+Author: 8989670898 <raiparth2@gmail.com>
+Date:   Mon Apr 16 23:25:55 2018 -0700
+
+    initial commit
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/repo2/SCM_PROJECT (test)
+$ git log -a -v -p
+commit a02b4f83c31bf6f7c6810638e1e841645d7e2c59 (HEAD -> test, origin/test)
+Author: Prajjawal Banati <500060722@stu.upes.ac.in>
+Date:   Sun Apr 22 17:58:17 2018 +0530
+
+    Added a constructor named as point and defined it
+
+diff --git a/operatoroverloading.cpp b/operatoroverloading.cpp
+index 75314d4..af4d886 100644
+--- a/operatoroverloading.cpp
++++ b/operatoroverloading.cpp
+@@ -1,20 +1,27 @@
+ #include <iostream>
+ using namespace std;
+
+-class Point {
+-  int x, y;
++class Point
++{
++int x, y;
+ public:
+-  Point() {} //prajjwal will add here
+-
+-  void show() {
+-    cout << x << " ";
+-    cout << y << "\n";
+-  }
++Point() {} //commit done by prajjwal
++Point (int px, int py)
++{
++x=px;
++y=py;
++}
++//
++void show()
++{
++cout << x << " ";
++cout << y << "\n";
++}
+
+-  friend Point operator+(Point op1, Point op2); // now a friend
+-  Point operator-(Point op2);
+-  Point operator=(Point op2);
+-  Point operator++();
++friend Point operator+(Point op1, Point op2); // now a friend
++Point operator-(Point op2);
+
