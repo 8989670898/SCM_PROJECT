@@ -35,7 +35,10 @@ Point Point::operator-(Point op2)
   return temp;
 }
  
-// Prakhar will work here
+// Prakhar added here
+x=op2.x;
+y=op2.y;
+return *this;
 Point Point::operator=(Point op2)
 {
 
