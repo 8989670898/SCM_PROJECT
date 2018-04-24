@@ -1,0 +1,81 @@
+
+500060720@upes-500060720 MINGW64 ~
+$ git clone "https://github.com/8989670898/SCM_PROJECT.git"
+Cloning into 'SCM_PROJECT'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 15 (delta 2), reused 15 (delta 2), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+
+500060720@upes-500060720 MINGW64 ~
+$ ls
+'3D Objects'/             Favorites/               NTUSER.DAT                                                                                     PrintHood@
+ AndroidStudioProjects/   inittk.ini               ntuser.dat.LOG1                                                                                Recent@
+ AppData/                 inst.ini                 ntuser.dat.LOG2                                                                               'Saved Games'/
+'Application Data'@       IntelGraphicsProfiles/   NTUSER.DAT{8ee7cd6b-13fe-11e8-8126-b32f15dd216c}.TM.blf                                        SCM_PROJECT/
+ BIT3244.tmp              Links/                   NTUSER.DAT{8ee7cd6b-13fe-11e8-8126-b32f15dd216c}.TMContainer00000000000000000001.regtrans-ms   Searches/
+ Contacts/               'Local Settings'@         NTUSER.DAT{8ee7cd6b-13fe-11e8-8126-b32f15dd216c}.TMContainer00000000000000000002.regtrans-ms   SendTo@
+ Cookies@                 MicrosoftEdgeBackups/    ntuser.ini                                                                                    'Start Menu'@
+ cpp/                     Music/                   nuuid.ini                                                                                      Templates@
+ Desktop/                'My Documents'@           OneDrive/                                                                                      Videos/
+ Documents/               NetHood@                 Oracle/                                                                                       'VirtualBox VMs'/
+ Downloads/               Nox_share/               Pictures/                                                                                      vmlogs/
+
+500060720@upes-500060720 MINGW64 ~
+$ pwd
+/c/Users/500060720
+
+500060720@upes-500060720 MINGW64 ~
+$ cd F:
+
+500060720@upes-500060720 MINGW64 /f
+$ mkdir Parthlast
+
+500060720@upes-500060720 MINGW64 /f
+$ cd Parthlast/
+
+500060720@upes-500060720 MINGW64 /f/Parthlast
+$ git clone "https://github.com/8989670898/SCM_PROJECT.git"
+Cloning into 'SCM_PROJECT'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 15 (delta 2), reused 15 (delta 2), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+
+500060720@upes-500060720 MINGW64 /f/Parthlast
+$ ls -ah
+./  ../  SCM_PROJECT/
+
+500060720@upes-500060720 MINGW64 /f/Parthlast
+$ cd SCM_PROJECT/
+
+500060720@upes-500060720 MINGW64 /f/Parthlast/SCM_PROJECT (master)
+$ ls -ah
+./  ../  .git/  binary.cpp  operatoroverloading.cpp
+
+500060720@upes-500060720 MINGW64 /f/Parthlast/SCM_PROJECT (master)
+$ git branch nish
+
+500060720@upes-500060720 MINGW64 /f/Parthlast/SCM_PROJECT (master)
+$ git checkout nish
+Switched to branch 'nish'
+
+500060720@upes-500060720 MINGW64 /f/Parthlast/SCM_PROJECT (nish)
+$ vi operatoroverloading.cpp
+
+500060720@upes-500060720 MINGW64 /f/Parthlast/SCM_PROJECT (nish)
+$ git status
+On branch nish
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   operatoroverloading.cpp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+500060720@upes-500060720 MINGW64 /f/Parthlast/SCM_PROJECT (nish)
+$ git add operatoroverloading.cpp
+
+500060720@upes-500060720 MINGW64 /f/Parthlast/SCM_PROJECT (nish)
+$

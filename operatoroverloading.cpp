@@ -17,10 +17,13 @@ public:
   Point operator++();
 };
 
-// Nishkarsh will addd here
+// Nishkarsh add here
 Point operator+(Point op1, Point op2)
 {
-
+	Point temp;
+	temp.x=op1.x+op2.x;
+	temp.y=op1.y+op2.y;
+	return temp;
 }
  
 // Overload - for Point.
